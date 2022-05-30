@@ -28,3 +28,66 @@ In counting correct notes and octaves, multiple occurrences in the guess are onl
 The game finishes once the performer guesses the correct chord (all three pitches in the guess are in the target). The object of the game for the performer is to find the target with the fewest possible guesses.
 
 This project was to write Haskell code to implement both the composer and performer parts of the game.
+
+
+# Marks
+
+- 14.6/15 (97.5%)
+
+  ```
+  pass toPitch check
+  pass Testing your feedback function.
+  pass Guessing validation test for target D1 B1 G3
+
+  Guessing test 1 output:
+  Successfully guessed the target E2 E1 F1
+  Guesses taken: 4
+  Points scored: 1.075
+
+  Guessing test 2 output:
+  Successfully guessed the target F3 D1 G3
+  Guesses taken: 3
+  Points scored: 1.4333333333333333
+
+  Guessing test 3 output:
+  Successfully guessed the target C2 C1 E2
+  Guesses taken: 4
+  Points scored: 1.075
+
+  Guessing test 4 output:
+  Successfully guessed the target D2 G1 B1
+  Guesses taken: 5
+  Points scored: 0.86
+
+  Guessing test 5 output:
+  Successfully guessed the target G1 A3 B1
+  Guesses taken: 6
+  Points scored: 0.7166666666666667
+
+  Guessing test 6 output:
+  Successfully guessed the target C1 D2 F2
+  Guesses taken: 4
+  Points scored: 1.075
+
+  Guessing test 7 output:
+  Successfully guessed the target C3 A3 A1
+  Guesses taken: 4
+  Points scored: 1.075
+
+  Guessing test 8 output:
+  Successfully guessed the target A2 E1 C3
+  Guesses taken: 5
+  Points scored: 0.86
+
+  Guessing test 9 output:
+  Successfully guessed the target F1 G3 B2
+  Guesses taken: 5
+  Points scored: 0.86
+
+  Guessing test 10 output:
+  Successfully guessed the target G2 D1 D3
+  Guesses taken: 4
+  Points scored: 1.075
+  ```
+
+- One of the most useful features of Haskell is the ability to define data types that cannot contain invalid values. This allows you to leverage the compiler to ensure correctness. For this reason you should prefer defining custom data types to using chars and ints. This would statically prevent ever accidentally creating an invalid pitch, like Pitch 'X' 'Y'.
